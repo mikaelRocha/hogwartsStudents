@@ -1,0 +1,50 @@
+
+
+
+*
+{
+padding                     : 0;
+margin                      : 0;
+box-sizing                  : border-box;
+}
+body
+{
+    --container-width       : 90vw;
+    --container-height      : "fit-content";
+
+    --container-bg          : white;
+}
+
+.container
+{
+    margin          : auto;
+    width           : var(--container-width);
+    height          : var(--container-height);
+    
+    border          :  5px solid black;
+    
+    list-style      : none;
+}
+
+/* const url = "http://hp-api.herokuapp.com/api/characters/students"
+
+fetch(url)
+.then(response => response.json())
+.then(response =>
+    {
+        console.log(response)
+        response.forEach(element => 
+        {
+            document.querySelector(".container").insertAdjacentHTML("beforeend", renderizarAluno(element))
+        });
+    }
+    )
+
+    function renderizarAluno(aluno)
+    {
+        return  `
+        <ul>
+        <li>Nome : ${aluno.name}</li>
+        </ul>
+        `
+    } */
