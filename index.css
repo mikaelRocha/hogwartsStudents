@@ -1,50 +1,146 @@
-
-
+@import url('http://fonts.cdnfonts.com/css/harry-potter');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 *
 {
-padding                     : 0;
-margin                      : 0;
-box-sizing                  : border-box;
+padding                                : 0;
+margin                                 : 0;
+box-sizing                             : border-box;
 }
 body
 {
-    --container-width       : 90vw;
-    --container-height      : "fit-content";
+    /* sizes */
+    --container-width                 : 90vw;
+    --container-height                : "fit-content";
+    --container-min-height            : 100vh;
 
-    --container-bg          : white;
+    --container-alunos-width          : 90%;
+    --container-alunos-height         : 1;
+
+    --container-botoes-width          : 100%;
+
+    --aluno-li-width                  : 100%;     
+    --aluno-span-width                : 1;  
+    
+    --container-botoes-width          : 100%;
+
+    /* Location */
+    --container-margin                 : auto;
+    --container-h1-padding             : 20px;
+
+    --container-alunos-margin-top      : 10px;
+
+    /* Paddings , gaps , font-size, aligns */
+    --container-aluno-gap              : 10px ;
+    --container-aluno-font-size        : 20pt;
+    /* Colors */
+
+    /* BACKGROUNDS, BORDERS, SHADOWS */
+
+    --container-h1-color    : rgb(255, 238, 0);
+    --container-text-shad01 : -2px -2px 1px rgb(43, 42, 1);
+    --container-text-shad02 : -3px -3px 1px rgb(121, 113, 0);
+
+    --btns-shadow-color     : rgb(251, 0, 0);
+                                
+    --btn-pg-padding        : 20px;
+
+background-image        : url('./background.jpg');
+background-size         : cover;
+background-repeat       : no-repeat;
+background-position     : center;
 }
 
-.container
+.main-container
 {
-    margin          : auto;
+    display         : flex;
+    position        : relative;
+    margin          : var(--container-margin) ;
     width           : var(--container-width);
     height          : var(--container-height);
+    min-height      : var( --container-min-height) ;
     
-    border          :  5px solid black;
-    
-    list-style      : none;
+    flex-direction  : column;
+    align-items     : center ;
+}
+.main-container h1
+{
+ 
+    font-family      : 'Harry Potter', sans-serif;
+    color            :  var( --container-h1-color );
+    text-shadow      :  var(--container-text-shad01),
+                        var(--container-text-shad02);
+    padding          :  var(--container-h1-padding) ;
+
+    text-align       : center ;
 }
 
-/* const url = "http://hp-api.herokuapp.com/api/characters/students"
+.container__alunos
+{
+    display         : flex;
+    flex            : var(--container-alunos-height);
+    margin-top      : var(--container-alunos-margin-top);
+    width           : var(--container-alunos-width);
+    
+    
+    font-family     : 'Amatic SC', cursive;
+    flex-direction  : column;
+    gap             : var(--container-aluno-gap);
+    font-size       : var(--container-aluno-font-size);
+ 
+}
+.aluno-ul
+{
+    backdrop-filter : blur(8px);
+    list-style      : none;                                   
+}
+.aluno-ul li
+{
+    display         : flex;
+    width           :  var(--aluno-li-width);
 
-fetch(url)
-.then(response => response.json())
-.then(response =>
-    {
-        console.log(response)
-        response.forEach(element => 
-        {
-            document.querySelector(".container").insertAdjacentHTML("beforeend", renderizarAluno(element))
-        });
-    }
-    )
+    background      : rgba(255, 255, 255, 0.336) ;
+    flex-direction  : column ;
+}
+.aluno-span
+{
+   flex            : var(--aluno-span-width);
+   
+   color           : white ;
+   text-shadow     : 1px 1px 1px black ;
+}
+.container__botoes
+{
+    display         : flex;
+    width           : var(--container-botoes-width) ;
 
-    function renderizarAluno(aluno)
-    {
-        return  `
-        <ul>
-        <li>Nome : ${aluno.name}</li>
-        </ul>
-        `
-    } */
+    justify-content : space-between ;
+}
+[btn-pg]
+{
+    border          : none;
+    border-radius   : 5px ;
+    font-size       : 25pt;
+    text-shadow     : 0 0 10px var(--btns-shadow-color),
+    0 0 10px var(--btns-shadow-color),
+    0 0 10px var(--btns-shadow-color),
+    0 0 10px var(--btns-shadow-color),
+    0 0 10px var(--btns-shadow-color),
+    0 0 10px var(--btns-shadow-color),
+    0 0 10px var(--btns-shadow-color),
+    0 0 10px var(--btns-shadow-color),
+    0 0 10px var(--btns-shadow-color),
+    0 0 30px var(--btns-shadow-color),
+    0 0 30px var(--btns-shadow-color),
+    0 0 30px var(--btns-shadow-color),
+    0 0 30px var(--btns-shadow-color),
+    0 0 30px var(--btns-shadow-color),
+    0 0 30px var(--btns-shadow-color),
+    0 0 30px var(--btns-shadow-color);
+    color           : white;
+    background      : transparent ;
+}
+[btn-pg]:hover
+{
+    font-size: 30pt;
+}

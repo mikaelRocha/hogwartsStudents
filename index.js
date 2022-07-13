@@ -13,8 +13,8 @@ fetch(url)
         const __resultadosPorPagina = 10
         const __numeroDePaginas     = parseInt(response.length / __resultadosPorPagina)
 
-        renderizarBotoesPaginacao(__numeroDePaginas     )
-        dividirResponse(__numeroDePaginas, __numeroDePaginas, response ) //
+        renderizarBotoesPaginacao(__numeroDePaginas)
+        dividirResponse(__numeroDePaginas, __numeroDePaginas, response)
         renderizarAlunos(0)
     }
     )
@@ -25,17 +25,14 @@ fetch(url)
         {
             paginaAtual = event.target.getAttribute('btn-pg')
             renderizarAlunos(paginaAtual)
-        }
-          
+        }    
     })
-
-
 
     function renderizarBotoesPaginacao(NumberOfpages)
     {
         for (let index = 0; index < NumberOfpages ; index++) 
         {
-            document.querySelector('.container').insertAdjacentHTML("beforeend", `<button btn-pg="${index}">${index}</button>`)
+            document.querySelector('.container__botoes').insertAdjacentHTML("beforeend", `<button btn-pg="${index}">${index}</button>`)
 
         } 
     }
@@ -57,8 +54,11 @@ fetch(url)
         resultsToShow[numeroDoBotao].forEach((element)=>
         {
             containerAlunos.insertAdjacentHTML("afterbegin",`
-            <ul class="list-group">
-                <li class="list-group-item">Nome :  ${element.name}</li>
+            <ul class="list-group aluno-ul">
+                <li class="list-group-item ">
+                    <span class="aluno-span">  Nome : ${element.name} </span>
+                    <span class="aluno-span"> Casa :  ${element.house}</span>
+                 </li>
             </ul>
             ` ) 
         })
