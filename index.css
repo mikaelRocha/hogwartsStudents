@@ -10,7 +10,7 @@ box-sizing                             : border-box;
 body
 {
     /* sizes */
-    --container-width                 : 90vw;
+    --container-width                 : 90%;
     --container-height                : "fit-content";
     --container-min-height            : 100vh;
 
@@ -24,7 +24,7 @@ body
     
     --container-botoes-width          : 100%;
 
-    /* Location */
+    /* Positions */
     --container-margin                 : auto;
     --container-h1-padding             : 20px;
 
@@ -44,6 +44,9 @@ body
     --btns-shadow-color     : rgb(251, 0, 0);
                                 
     --btn-pg-padding        : 20px;
+
+min-width               : 200px;
+min-height              : 800px;
 
 background-image        : url('./background.jpg');
 background-size         : cover;
