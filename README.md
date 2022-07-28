@@ -5,7 +5,7 @@ Lista de  alunos de Hogwarts exibi o nome de todos alunos da escola de magia de 
  - CSS
  - JavaScript
 # Fontes
-Fonte do titulo - cdnfonts.com/harry-potter.font  
+Fonte do titulo - https://cdnfonts.com/harry-potter.font  
 
 fonte do corpo  - https://fonts.google.com/specimen/Amatic+SC?subset=vietnamese
 # Imagens
