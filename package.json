@@ -1,0 +1,19 @@
+{
+  "name": "hogwartsstudents",
+  "version": "1.0.0",
+  "description": "Lista de  alunos de Hogwarts exibi o nome de todos alunos da escola de magia de Hogwarts e suas respectivas casas, a partir do consumo de uma API\r # Tecnologias usadas\r  - HTML\r  - CSS\r  - JavaScript\r # Fontes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikaelRocha/hogwartsStudents.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikaelRocha/hogwartsStudents/issues"
+  },
+  "homepage": "https://github.com/mikaelRocha/hogwartsStudents#readme"
+}
